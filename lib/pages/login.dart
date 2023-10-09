@@ -9,12 +9,16 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+
+  final emailController = TextEditingController();
+  final passController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Demo',
+        title: Text('LOGIN',
           style: TextStyle(
               fontSize: 22
           ),
@@ -42,6 +46,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   SizedBox(height: 70),
 
                   TextFormField(
+                    keyboardType: TextInputType.emailAddress,
+                    controller: emailController,
                     decoration: InputDecoration(
                       labelText: "Username",
                       border: OutlineInputBorder(),
@@ -52,6 +58,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   SizedBox(height: 25),
 
                   TextFormField(
+                    controller: passController,
                     obscureText: true,
                     decoration: InputDecoration(
                       labelText: "Password",
@@ -64,8 +71,24 @@ class _LoginScreenState extends State<LoginScreen> {
 
                   ElevatedButton(
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(
-                          builder: (context) => HomePage()));
+
+                      if (emailController.text == "admin"){
+                        if (passController.text == "admin"){
+                          Navigator.push(context, MaterialPageRoute(
+                              builder: (context) => HomePage()));
+                        }
+                        else{
+                          ScaffoldMessenger.of (context).showSnackBar (const SnackBar(
+                            content: Text('Enter a valid password'),
+                          ));
+                        }
+                      }
+                      else{
+                        ScaffoldMessenger.of (context).showSnackBar (const SnackBar(
+                          content: Text('Enter a valid username'),
+                        ));
+                      }
+
                     },
                     child: Text('Login',
                       style: TextStyle(

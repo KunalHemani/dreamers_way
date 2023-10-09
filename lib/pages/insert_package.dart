@@ -28,9 +28,9 @@ class _InsertPackageState extends State<InsertPackage> {
   }
 
   // Insert a new journal to the database
-  Future<void> _addItem() async {
+  Future<void> _addItem()  async {
     try {
-      await SQLHelper.createItem(
+       SQLHelper.createItem(
           _titleController,
           _descriptionController,
           _amountController,

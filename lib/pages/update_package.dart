@@ -21,7 +21,6 @@ class _UpdatePackageState extends State<UpdatePackage> {
 
   List<Map<String, dynamic>> _journals = [];
   bool _isLoading = true;
-
   // int _choiceIndex = 0;
 
   void _refreshJournals() async {
@@ -73,8 +72,16 @@ class _UpdatePackageState extends State<UpdatePackage> {
           _imageController
 
       );
+      print("try update_package");
       print(abc);
+      // print(city_index, _titleController, _descriptionController, _amountController, _imageController);
+      print('city_index: $city_index');
+      print('Title: ${_titleController}');
+      print('Description: ${_descriptionController}');
+      print('Amount: ${_amountController}');
+      print('Image: ${_imageController}');
     } catch (e) {
+      print("catch update_package");
       print(e);
     }
     // void _showForm(int? id) async {
@@ -114,6 +121,7 @@ class _UpdatePackageState extends State<UpdatePackage> {
             children: [
               TextFormField(
                 initialValue: _journals[city_index!]["title"],
+                enabled: false,
                 onChanged: (value) {
                   setState(() {
                     _titleController = value.trim();
@@ -130,6 +138,7 @@ class _UpdatePackageState extends State<UpdatePackage> {
               const SizedBox(height: 10),
               TextFormField(
                 initialValue: _journals[city_index!]["description"],
+                enabled: false,
                 onChanged: (value) {
                   setState(() {
                     _descriptionController = value.trim();
@@ -181,6 +190,7 @@ class _UpdatePackageState extends State<UpdatePackage> {
               const SizedBox(height: 10),
               TextFormField(
                 initialValue: _journals[city_index!]["coverImage"],
+                enabled: false,
                 onChanged: (value) {
                   setState(() {
                     _imageController = value.trim();
@@ -195,7 +205,7 @@ class _UpdatePackageState extends State<UpdatePackage> {
                 ),
               ),
               // ElevatedButton(onPressed: () => _showForm(),
-              //   child: Icon(Icons.abc_rounded),
+              //   child: Icon(Icons.abc_rounded),),
             ],
           ),
         ),
