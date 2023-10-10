@@ -142,10 +142,10 @@ class SQLHelper {
       // var sql = "UPDATE package SET title = ?, description = ?, amount = ?, coverImage = ? WHERE id = ?' [titleController, descriptionController, amountController, imageController, indexController]";
 
 
-      var sql1 = "UPDATE package SET title = 'Surat', description = 'Surat's food is very famous.', amount = '${amountController}', coverImage = 'https://www.achhikhabar.com/wp-content/uploads/2023/01/%E0%A4%B8%E0%A5%82%E0%A4%B0%E0%A4%A4-%E0%A4%95%E0%A4%BE-%E0%A4%87%E0%A4%A4%E0%A4%BF%E0%A4%B9%E0%A4%BE%E0%A4%B8-Complete-History-of-Surat-in-Hindi-1024x576.jpg' WHERE id = 7";
-      var sql2 = "UPDATE package SET title = 'Goa', description = 'Goa is a very beautiful', amount = '${amountController}', coverImage = 'https://th.bing.com/th/id/OIP.13QYrG_OR_ZNhuiR76S7eQAAAA?pid=ImgDet&rs=1' WHERE id = 8";
-      var sql3 = "UPDATE package SET title = 'Kerala', description = 'Kerala has various places to visit.', amount = '${amountController}', coverImage = 'https://th.bing.com/th/id/OIP.UYiSdWPVH1ZBQfy_IX-6LwHaFj?pid=ImgDet&w=800&h=600&rs=1' WHERE id = 9";
-      var sql4 = "UPDATE package SET title = 'Amritsar', description = 'The famous Golden Temple', amount = '${amountController}', coverImage = 'https://live.staticflickr.com/4817/44986206145_2b7b818ecf_b.jpg' WHERE id = 11";
+      var sql1 = "UPDATE package SET title = 'Surat', description = 'Surat's food is very famous.', amount = '$amountController', coverImage = 'https://www.achhikhabar.com/wp-content/uploads/2023/01/%E0%A4%B8%E0%A5%82%E0%A4%B0%E0%A4%A4-%E0%A4%95%E0%A4%BE-%E0%A4%87%E0%A4%A4%E0%A4%BF%E0%A4%B9%E0%A4%BE%E0%A4%B8-Complete-History-of-Surat-in-Hindi-1024x576.jpg' WHERE id = 12";
+      var sql2 = "UPDATE package SET title = 'Goa', description = 'Goa is a very beautiful', amount = '$amountController', coverImage = 'https://th.bing.com/th/id/OIP.13QYrG_OR_ZNhuiR76S7eQAAAA?pid=ImgDet&rs=1' WHERE id = 14";
+      var sql3 = "UPDATE package SET title = 'Kerala', description = 'Kerala has various places to visit.', amount = '$amountController', coverImage = 'https://th.bing.com/th/id/OIP.UYiSdWPVH1ZBQfy_IX-6LwHaFj?pid=ImgDet&w=800&h=600&rs=1' WHERE id = 15";
+      var sql4 = "UPDATE package SET title = 'Amritsar', description = 'It has a very famous place ""Golden Temple""', amount = '$amountController', coverImage = 'https://live.staticflickr.com/4817/44986206145_2b7b818ecf_b.jpg' WHERE id = 13";
 
       db.rawUpdate(sql1);
       db.rawUpdate(sql2);

@@ -168,7 +168,7 @@ class _DetailPackageState extends State<DetailPackage> {
                                 });
                               },
                               child: Container(
-                                margin: EdgeInsets.only(right: 10),
+                                margin: EdgeInsets.only(right: 5),
                                 child: AppButtons(
                                   color: selectedIndex == index
                                       ? Colors.white
@@ -177,7 +177,7 @@ class _DetailPackageState extends State<DetailPackage> {
                                   backgroundColor: selectedIndex == index
                                       ? Colors.blue.shade200
                                       : Colors.white,
-                                  size: 60,
+                                  size: 50,
                                   borderColor: selectedIndex == index ? Colors
                                       .black : Colors.grey,
                                   text: (index + 1).toString(),
@@ -206,9 +206,9 @@ class _DetailPackageState extends State<DetailPackage> {
                       ],
                     ),
                   ),),
-                SizedBox(height: 10),
+                SizedBox(height: 15),
                 Padding(
-                  padding: const EdgeInsets.only(top: 700, left: 145),
+                  padding: const EdgeInsets.only(top: 720, left: 100),
                   child: ElevatedButton(
                       onPressed: () {}, child: Text("BOOK NOW",
                     style: TextStyle(fontSize: 20),)),

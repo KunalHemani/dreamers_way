@@ -1,3 +1,4 @@
+import 'package:dreamers_way/pages/home_page.dart';
 import 'package:dreamers_way/utils/sql_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -56,7 +57,7 @@ class _UpdatePackageState extends State<UpdatePackage> {
     if (_formKey.currentState!.validate()) {
       // (_isEditable) ? _updateItem() : _addItem();
       _updateItem();
-      Navigator.of(context).pop();
+      Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
       _formKey.currentState!.reset();
     }
   }
@@ -107,6 +108,7 @@ class _UpdatePackageState extends State<UpdatePackage> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           _submitForm();
+          HomePage();
         },
         child: Icon(
             Icons.save
